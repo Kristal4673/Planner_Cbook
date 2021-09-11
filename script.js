@@ -1,10 +1,10 @@
 //----define moment varibles used to show time----//
-var date = moment().format("MMM Do YY");
+//var date = moment().format("MMM Do YY");
 // var currentTime = moment().format('H');
 // console.log(currentTime);
 
 //-------append date----------//
-$("#currentDay").append(date);
+$("#currentDay").text(moment().format("MMM Do YYYY"));
 
 //---------background Updater------------------------//
 
@@ -12,16 +12,22 @@ var timeOfday = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
 updatetime();
 
 function updatetime() {
-  var currentTime = moment().format("H");
-  for (var i = 0; i < timeOfday.length; i++) {
-    if (parseInt(timeOfday[i]) > currentTime) {
-      $("#" + timeOfday[i]).attr("style", "background-color: #58ce7b");
-    } else if (parseInt(timeOfday[i]) < currentTime) {
-      $("#" + timeOfday[i]).attr("style", "background-color: lightgray");
-    } else if (parseInt(timeOfday[i]) == currentTime) {
-      $("#" + timeOfday[i]).attr("style", "background-color: #fc665e");
+  var currentTime = moment().hours();
+
+  // use jquery to loop through timeblocks
+  $(".time-block").each(function () {
+    var gridTime = parseInt($(this).attr("id"));
+    if (gridTime < currentTime) {
+      $(this).addClass("past");
+    } else if (gridTime === currentTime) {
+      $(this).removeClass("past");
+      $(this).addClass("present");
+    } else {
+      $(this).removeClass("past");
+      $(this).removeClass("present");
+      $(this).addClass("future");
     }
-  }
+  });
 }
 
 //--onclick event to save user input to local storage---//

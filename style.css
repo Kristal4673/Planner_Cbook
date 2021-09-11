@@ -13,11 +13,11 @@ textarea {
   padding: 10px;
 }
 
-.jumbotron {
+header.row {
   text-align: center;
   background-color: transparent;
   color: black;
-  border-radius: 0;
+  border-radius: 1;
   border-bottom: 10px solid black;
 }
 
@@ -44,17 +44,22 @@ textarea {
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color:red;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color:green;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: blue;
+}
+
+#currentDay{
+  display:flex; 
+  text-align: flex-end; 
 }
 
 .saveBtn {

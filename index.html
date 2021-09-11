@@ -22,34 +22,80 @@
 <body>
   <div class="container">
     <!--------------------Header------------------->
-    <!--once planner displays b-->
-    <!-- Timeblocks go here -->
-    <header class="card text-center shadow p-3 mb-5 mt-3 bg-light rounded">
-      <h1 class="display-4">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+    <!--once planner displays  ----->
+    <!-- Timeblocks go here --->
+    <header class="row time-block">
+      <h1 class="display-4">Work Day Planner</h1>
+      <p class="lead"> </p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <!-- Timeblocks go here Each time slot should represent one hour and contain the following: * The time * A field to hold user input * A save button -->
-    <!--Row 1 9am-->
+    <!-- Time-blocks go here Each time slot should represent one hour and contain the following: * The time * A field to hold user input * A save button -->
+  
     <div class="container">
       <!-- 9am block -->
-      <div class="row time-block ">
+      <div id= "9" class="row time-block ">
         <div class="col-md-1 hour">9am</div>
         <textarea class="col-md-10 description"></textarea>
         <button class="btn col-md-1 saveBtn"><i class="far fa-save"></i></button>
       </div>
+      <!-- 10am block -->
+      <div id= "10" class="row time-block ">
+        <div class="col-md-1 hour">10am</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn col-md-1 saveBtn"><i class="far fa-save"></i></button>
+      </div>
+      <!-- 11am block -->
+      <div id= "11" class="row time-block ">
+        <div class="col-md-1 hour">11am</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn col-md-1 saveBtn"><i class="far fa-save"></i></button>
+      </div>
+      <!-- 12am block -->
+      <div id= "12" class="row time-block ">
+        <div class="col-md-1 hour">12pm</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn col-md-1 saveBtn"><i class="far fa-save"></i></button>
+      </div>
+      <!-- 1pm block -->
+      <div id= "13" class="row time-block ">
+        <div class="col-md-1 hour">1pm</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn col-md-1 saveBtn"><i class="far fa-save"></i></button>
+      </div>
+      <!-- 2pm block -->
+      <div id= "14" class="row time-block ">
+        <div class="col-md-1 hour">2pm</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn col-md-1 saveBtn"><i class="far fa-save"></i></button>
+      </div>
+      <!-- 3pm block -->
+      <div id= "15" class="row time-block ">
+        <div class="col-md-1 hour">3pm</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn col-md-1 saveBtn"><i class="far fa-save"></i></button>
+      </div>
+      <!-- 4pm block -->
+      <div id= "16" class="row time-block ">
+        <div class="col-md-1 hour"> 4pm</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn col-md-1 saveBtn"><i class="far fa-save"></i></button>
+      </div>
+      <!-- 5pm block -->
+      <div id= "17" class="row time-block ">
+        <div class="col-md-1 hour"> 5pm</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn col-md-1 saveBtn"><i class="far fa-save"></i></button>
+      </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- jQuery links-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
 </body>
 
