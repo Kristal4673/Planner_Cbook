@@ -31,29 +31,29 @@ function updatetime() {
 }
 
 //--onclick event to save user input to local storage---//
-$(".rowBtn").on("click", function () {
+$(".saveBtn").on("click", function () {
   var timeOfday = $(this).parent().attr("id");
-  var textContent = $("input").val().trim();
+  var textContent = $(this).siblings("textarea").val().trim();
+  console.log(timeOfday);
 
   localStorage.setItem(timeOfday, textContent);
   console.log(timeOfday, textContent);
 });
 
 //-------Getting individual childern and setting to parent-----//
-$("#9am").children("input").val(localStorage.getItem("9am"));
+$("#9").children("textarea").val(localStorage.getItem("9"));
 
-$("#10am").children("input").val(localStorage.getItem("10am"));
+$("#10").children("textarea").val(localStorage.getItem("10"));
 
-$("#11am").children("input").val(localStorage.getItem("11am"));
+$("#11").children("textarea").val(localStorage.getItem("11"));
 
-$("#12pm").children("input").val(localStorage.getItem("12pm"));
+$("#12").children("textarea").val(localStorage.getItem("12"));
 
-$("#1pm").children("input").val(localStorage.getItem("1pm"));
+$("#13").children("textarea").val(localStorage.getItem("13"));
 
-$("#2pm").children("input").val(localStorage.getItem("2pm"));
+$("#14").children("textarea").val(localStorage.getItem("14"));
 
-$("#3pm").children("input").val(localStorage.getItem("3pm"));
+$("#15").children("textarea").val(localStorage.getItem("15"));
 
-$("#4pm").children("input").val(localStorage.getItem("4pm"));
-
-$("#5pm").children("input").val(localStorage.getItem("5pm"));
+$("#16").children("textarea").val(localStorage.getItem("16"));
+$("#17").children("textarea").val(localStorage.getItem("17"));
