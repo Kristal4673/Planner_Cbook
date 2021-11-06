@@ -30,7 +30,7 @@ function updatetime() {
   });
 }
 
-//--onclick event to save user input to local storage---//
+//--onclick event handler to save user input to local storage---//
 $(".saveBtn").on("click", function () {
   var timeOfday = $(this).parent().attr("id");
   var textContent = $(this).siblings("textarea").val().trim();
