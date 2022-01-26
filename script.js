@@ -1,16 +1,13 @@
-//----define moment varibles used to show time----//
-//var date = moment().format("MMM Do YY");
-// var currentTime = moment().format('H');
-// console.log(currentTime);
 
-//-------append date----------//
+// Provides date in Mon 00th 0000 format //
 $("#currentDay").text(moment().format("MMM Do YYYY"));
 
-//---------background Updater------------------------//
+
 
 var timeOfday = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
 updatetime();
 
+//this updated the time for current day 
 function updatetime() {
   var currentTime = moment().hours();
 
@@ -30,7 +27,7 @@ function updatetime() {
   });
 }
 
-//--onclick event to save user input to local storage---//
+// this saves to local storage user input //
 $(".saveBtn").on("click", function () {
   var timeOfday = $(this).parent().attr("id");
   var textContent = $(this).siblings("textarea").val().trim();
@@ -40,7 +37,7 @@ $(".saveBtn").on("click", function () {
   console.log(timeOfday, textContent);
 });
 
-//-------Getting individual childern and setting to parent-----//
+// Getting individual children and setting to parent //
 $("#9").children("textarea").val(localStorage.getItem("9"));
 
 $("#10").children("textarea").val(localStorage.getItem("10"));
